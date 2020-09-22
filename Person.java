@@ -1,7 +1,5 @@
 package cvGenerator;
 
-import java.util.List;
-
 public class Person {
 
     private String name;
@@ -11,7 +9,7 @@ public class Person {
     private String linkedInPage;
     private String aboutMe;
 
-    public Person(String name, String email, String phoneNumber, String gitHubAddress, String linkedInPage, String aboutMe, List<Study> Studies) {
+    public Person(String name, String email, String phoneNumber, String gitHubAddress, String linkedInPage, String aboutMe) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
