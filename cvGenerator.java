@@ -7,11 +7,11 @@ public class cvGenerator {
 
     public static void main(String[] args) {        
         // Initialize subject
-        String aboutMe = "Műszaki szakszövegíróként kezdett el először igazán érdekelni a szoftverfejlesztés, programozás világa.\n"
-                + "Kíváncsi lettem, hogy azon felül, hogy mit tud egy program, vajon hogyan csinálja azt.\n"
-                + "Így vágtam bele a kódolás tanulásába, először autodidaktaként, később egy online iskola diákja lettem.\n"
-                + "A tananyag elsajátítása közben a kezdeti érdeklődésem kibontakozott, és a tanulás a szenvedélyemmé vált.\n"
-                + "Elköteleződtem képességeim fejlesztése mellett, melyeket egy sikeres céggel együttműködve képzelek el a továbbiakban.";
+        String aboutMe = "I was working as a technical writer when the world of programming first started to interest me.\n"
+                + "I got curious that apart from what a program does, how does it do it. Therefore, I started to learn coding.\n"
+                + "I chose the self-taught route in the beginning, later, I switched to an online school.\n"
+                + "During my studies, my first interest blossomed and became a passion for learning.\n"
+                + "I set my mind on honing my programming skills, which I would like to continue alongside a successful company.";
         Person subject = new Person("Balázs Paraszthy", "paraszthybalazs@gmail.com", "+3630-176-2651", "https://github.com/MarcusCalgar", "https://bit.ly/2RDF17x", aboutMe);
         
         //Initialize studies
@@ -23,10 +23,10 @@ public class cvGenerator {
         
         // Initialize Projects
         List<Project> projects = new ArrayList<>();
-        Project firstProject = new Project("Költségvetés Tervező", "(https://bit.ly/35NuDSU)", "Költségvetés nyilvántartó program amely lehetővé teszi egy család pénzmozgásának nyomon követését.");
-        Project secondProject = new Project("Tennivaló kezelő", "(https://bit.ly/2ZPZUkl)", "Konzolból működtethető tennivaló kezelő alkalmazás.");
-        Project thirdProject = new Project("Körlevél küldő", "(https://bit.ly/3hHXt9v)", "Konzolos körlevél előállító alkalmazás, amely az előállított leveleket fájlba írja.");
-        Project fourthProject = new Project("Önéletrajz generátor", "(https://bit.ly/3hOPmrM)", "CV készítő alkalmazás, amivel a jelen önéletrajz is előállítható.");
+        Project firstProject = new Project("Finance planner", "(https://bit.ly/35NuDSU)", "Makes tracking the finances of a family or individual more easy.");
+        Project secondProject = new Project("To-do app", "(https://bit.ly/2ZPZUkl)", "Lightweight to-do app that works from the console.");
+        Project thirdProject = new Project("Email sender", "(https://bit.ly/3hHXt9v)", "Email sender that can send mails to multiple recipients at once. It writes the generated letters into text files.");
+        Project fourthProject = new Project("CV generator", "(https://bit.ly/3hOPmrM)", "More of a funny app, that can create a CV such as this one from the console.");
         projects.add(firstProject);
         projects.add(secondProject);
         projects.add(thirdProject);
@@ -84,9 +84,9 @@ public class cvGenerator {
 
         //Initialize workplaces
         List<Workplace> workplaces = new ArrayList<>();
-        Workplace semcon = new Workplace(2017, 2020, "Semcon Kft.", "Technical Writer", "Feladatom volt egy vezető távközlési cég mérnökeivel "
-                + "együttműködve két különböző szoftveres termék dokumentációjának írása, fejlesztése, frissítése. "
-                + "Emellett részt vettem különböző, a termékek által használt technológiákhoz tartozó tréningeken és továbbképzéseken.");
+        Workplace semcon = new Workplace(2017, 2020, "Semcon Kft.", "Technical Writer", "My task was to cooperate with the software developers of a leading telecommunication company,\n"
+                + "in order to keep the documentation of two separate software products modern, fresh and up-to-date.\n"
+                + "I also participated in trainings which were realted to the technologies the software used.");
         workplaces.add(semcon);
         
         //Initialize references
