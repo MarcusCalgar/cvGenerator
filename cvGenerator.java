@@ -23,14 +23,14 @@ public class cvGenerator {
         
         // Initialize Projects
         List<Project> projects = new ArrayList<>();
-        Project firstProject = new Project("Finance planner", "(https://bit.ly/35NuDSU)", "Makes tracking the finances of a family or individual more easy.");
-        Project secondProject = new Project("To-do app", "(https://bit.ly/2ZPZUkl)", "Lightweight to-do app that works from the console.");
-        Project thirdProject = new Project("Email sender", "(https://bit.ly/3hHXt9v)", "Email sender that can send mails to multiple recipients at once. It writes the generated letters into text files.");
-        Project fourthProject = new Project("CV generator", "(https://bit.ly/3hOPmrM)", "More of a funny app, that can create a CV such as this one from the console.");
-        projects.add(firstProject);
-        projects.add(secondProject);
-        projects.add(thirdProject);
-        projects.add(fourthProject);
+        Project financePlanner = new Project("Finance planner", "(https://bit.ly/35NuDSU)", "Makes tracking the finances of a family or individual more easy.");
+        Project todoApp = new Project("To-do app", "(https://bit.ly/2ZPZUkl)", "Lightweight to-do app that works from the console.");
+        Project emailSender = new Project("Email sender", "(https://bit.ly/3hHXt9v)", "Email sender that can send mails to multiple recipients at once. It writes the generated letters into text files.");
+        Project cvGenerator = new Project("CV generator", "(https://bit.ly/3hOPmrM)", "More of a funny app, that can create a CV such as this one from the console.");
+        projects.add(financePlanner);
+        projects.add(todoApp);
+        projects.add(emailSender);
+        projects.add(cvGenerator);
 
         //Initialize experience
         List<Experience> professionalExperiences = new ArrayList<>();
