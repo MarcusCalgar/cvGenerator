@@ -5,7 +5,7 @@ import java.util.List;
 
 public class cvGenerator {
 
-    public static void main(String[] args) {        
+    public static void main(String[] args) {
         // Initialize subject
         String aboutMe = "I was working as a technical writer when the world of programming first started to interest me.\n"
                 + "I got curious that apart from what a program does, how does it do it. Therefore, I started to learn coding.\n"
@@ -13,14 +13,14 @@ public class cvGenerator {
                 + "During my studies, my first interest blossomed and became a passion for learning.\n"
                 + "I set my mind on honing my programming skills, which I would like to continue alongside a successful company.";
         Person subject = new Person("Balázs Paraszthy", "paraszthybalazs@gmail.com", "+3630-176-2651", "https://github.com/MarcusCalgar", "https://bit.ly/2RDF17x", aboutMe);
-        
+
         //Initialize studies
         List<Study> studies = new ArrayList<>();
         Study firstSchool = new Study("StudiCore Online", 2019, 2020);
         Study secondSchool = new Study("The Odin Project", 2018, 2019);
         studies.add(firstSchool);
         studies.add(secondSchool);
-        
+
         // Initialize Projects
         List<Project> projects = new ArrayList<>();
         Project financePlanner = new Project("Finance planner", "(https://bit.ly/35NuDSU)", "Makes tracking the finances of a family or individual more easy.");
@@ -88,7 +88,7 @@ public class cvGenerator {
                 + "in order to keep the documentation of two separate software products modern, fresh and up-to-date.\n"
                 + "I also participated in trainings which were realted to the technologies the software used.");
         workplaces.add(semcon);
-        
+
         //Initialize references
         List<Reference> references = new ArrayList<>();
         Reference danielP = new Reference("Dániel Pasztuhov", "CTO at StudiCore Oktatási Kft.", "daniel.pasztuhov@studicore.hu");
@@ -138,12 +138,12 @@ public class cvGenerator {
     public static void showProjects(CV cv) {
         System.out.println("Projects");
         insertLine(1);
-        cv.getProjects().forEach((Project project) -> {
-            System.out.println(project.getName());
-            System.out.println(project.getLink());
-            System.out.println(project.getDescription());
+        for (int i = 0; i < cv.getProjects().size(); i += 2) {
+            System.out.printf("%-120s" + "%-40s\n", cv.getProjects().get(i).getName(), cv.getProjects().get(i + 1).getName());
+            System.out.printf("%-120s" + "%-40s\n", cv.getProjects().get(i).getLink(), cv.getProjects().get(i + 1).getLink());
+            System.out.printf("%-120s" + "%-40s\n", cv.getProjects().get(i).getDescription(), cv.getProjects().get(i + 1).getDescription());
             insertLine(1);
-        });
+        }
     }
 
     public static void showExperience(CV cv) {
@@ -167,16 +167,27 @@ public class cvGenerator {
             System.out.println(place.getJobDescription());
         });
     }
-    
-    public static void showReferences(CV cv){
+
+    public static void showReferences(CV cv) {
         System.out.println("References");
         insertLine(1);
-        cv.getReferences().forEach((Reference ref)->{
+        cv.getReferences().forEach((Reference ref) -> {
             System.out.println(ref.getName());
             System.out.println(ref.getTitle());
             System.out.println(ref.getEmail());
             insertLine(1);
-        });        
+        });
+    }
+
+    public static List projectMixer(Project first, Project second) {
+        ArrayList<String> mixedProjects = new ArrayList<>();
+        mixedProjects.add(first.getName());
+        mixedProjects.add(second.getName());
+        mixedProjects.add(first.getLink());
+        mixedProjects.add(second.getLink());
+        mixedProjects.add(first.getDescription());
+        mixedProjects.add(second.getDescription());
+        return mixedProjects;
     }
 
     public static void insertLine(int number) {
