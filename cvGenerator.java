@@ -12,7 +12,7 @@ public class cvGenerator {
                 + "I chose the self-taught route in the beginning, later, I switched to an online school.\n"
                 + "During my studies, my first interest blossomed and became a passion for learning.\n"
                 + "I set my mind on honing my programming skills, which I would like to continue alongside a successful company.";
-        Person subject = new Person("Balázs Paraszthy", "paraszthybalazs@gmail.com", "+3630-176-2651", "https://github.com/MarcusCalgar", "https://bit.ly/2RDF17x", aboutMe);
+        Person subject = new Person("Marcus Calgar", "Email address", "Phone Number", "https://github.com/MarcusCalgar", "LinkedIn Address", aboutMe);
 
         //Initialize studies
         List<Study> studies = new ArrayList<>();
@@ -84,15 +84,15 @@ public class cvGenerator {
 
         //Initialize workplaces
         List<Workplace> workplaces = new ArrayList<>();
-        Workplace semcon = new Workplace(2017, 2020, "Semcon Kft.", "Technical Writer", "My task was to cooperate with the software developers of a leading telecommunication company,\n"
+        Workplace semcon = new Workplace(2017, 2020, "Company Name", "Technical Writer", "My task was to cooperate with the software developers of a leading telecommunication company,\n"
                 + "in order to keep the documentation of two separate software products modern, fresh and up-to-date.\n"
                 + "I also participated in trainings which were realted to the technologies the software used.");
         workplaces.add(semcon);
 
         //Initialize references
         List<Reference> references = new ArrayList<>();
-        Reference danielP = new Reference("Dániel Pasztuhov", "CTO at StudiCore Oktatási Kft.", "daniel.pasztuhov@studicore.hu");
-        Reference peterV = new Reference("Péter Varga", "Teacher at StudiCore Oktatási Kft.", "varga.peter@studicore.hu");
+        Reference danielP = new Reference("Reference 1", "Position and company of reference 1.", "email of reference 1");
+        Reference peterV = new Reference("Reference 2", "Position and company of reference 2.", "email of reference 2");
         references.add(danielP);
         references.add(peterV);
 
@@ -177,17 +177,6 @@ public class cvGenerator {
             System.out.println(ref.getEmail());
             insertLine(1);
         });
-    }
-
-    public static List projectMixer(Project first, Project second) {
-        ArrayList<String> mixedProjects = new ArrayList<>();
-        mixedProjects.add(first.getName());
-        mixedProjects.add(second.getName());
-        mixedProjects.add(first.getLink());
-        mixedProjects.add(second.getLink());
-        mixedProjects.add(first.getDescription());
-        mixedProjects.add(second.getDescription());
-        return mixedProjects;
     }
 
     public static void insertLine(int number) {
